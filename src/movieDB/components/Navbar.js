@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-// import SearchForm from './SearchForm'
+import { FiSearch } from "react-icons/fi";
+import { useGlobalContext } from '../Context';
 
 const Navbar = () => {
+  const { searchToggle, setSearchToggle } = useGlobalContext()
   return (
     <nav className='nav container'>
       <div className='logo'>
@@ -10,8 +12,10 @@ const Navbar = () => {
           <p>TheMovieDB</p>
         </Link>
       </div>
-      {/* <SearchForm /> */}
       <ul className='links'>
+        <button className='search-btn' onClick={() => { setSearchToggle(!searchToggle) }}>
+          <FiSearch />
+        </button>
         <li>
           <Link to='/'>Home</Link>
         </li>

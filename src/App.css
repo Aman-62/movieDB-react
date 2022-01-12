@@ -105,9 +105,20 @@ img{
   background-color: var(--color1);
 }
 .search-container{
+  display: none;
+}
+.active{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.search-btn{
+  border: none;
+  background-color: transparent;
+  font-size: 1.4rem;
+  padding-right: 1rem;
+  cursor: pointer;
 }
 
 .search-input input{
@@ -116,8 +127,11 @@ img{
   height: 2.6rem;
   padding: 0 1rem;
   border: 1px solid #d8d8d8;
-  border-radius: 50px;
+  border-radius: 25px;
   /* display: none; */
+}
+.search-input input:focus{
+  outline: 1px solid #444;
 }
 @media (min-width:50em){
   .search-input input{

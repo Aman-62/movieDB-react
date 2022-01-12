@@ -6,8 +6,9 @@ const AppContext = React.createContext()
 
 const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
-  const [searchTerm, setSearchTerm] = useState('a')
+  const [searchTerm, setSearchTerm] = useState('')
   const [movies, setMovies] = useState([])
+  const [searchToggle, setSearchToggle] = useState(false)
 
   const fetchMovies = useCallback(async () => {
     setLoading(true)
@@ -15,10 +16,10 @@ const AppProvider = ({ children }) => {
       const response = await fetch(`${url}${searchTerm}`)
       const data = await response.json()
       // console.log(data);
-      const movies = data.results
+      const movie = data.results
       // console.log(movies);
-      if (movies) {
-        const newMovies = movies.map((item) => {
+      if (movie) {
+        const newMovies = movie.map((item) => {
           const { id, popularity, title, release_date, poster_path } = item
           return { id, popularity, title, release_date, poster_path }
         })
@@ -37,7 +38,7 @@ const AppProvider = ({ children }) => {
     fetchMovies()
   }, [searchTerm, fetchMovies])
 
-  return <AppContext.Provider value={{ loading, movies, setSearchTerm }}>{children}</AppContext.Provider>
+  return <AppContext.Provider value={{ loading, movies, setSearchTerm, searchToggle, setSearchToggle }}>{children}</AppContext.Provider>
 }
 // make sure use
 export const useGlobalContext = () => {

@@ -10,7 +10,7 @@ const MovieList = () => {
     return <Loading />
   }
   if (movies.length < 1) {
-    return <h2>No movies Found. </h2>
+    return null
   }
   return (
     <main className='container main'>
