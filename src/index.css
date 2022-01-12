@@ -1,5 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+:root {
+  --clr-bcg: #fff;
+  --clr-font: #282c35;
+  --clr-primary: #d23669;
+}
+
+/* .dark-theme {
+  --clr-bcg: #282c35;
+  --clr-font: #fff;
+  --clr-primary: #ffa7c4;
+}
+.light-theme {
+  --clr-bcg: #fff;
+  --clr-font: #282c35;
+  --clr-primary: #d23669;
+} */
+
+.dark-theme {
+  --clr-bcg:#161622;
+  --clr-font: #fff;
+  --clr-primary:#FBC390;
+}
+.light-theme {
+  --clr-bcg:#EFF0F2;
+  --clr-font: #282c35;
+  --clr-primary:#FBC390;
+}
+
 *,*::before,*::after{
   margin: 0;
   padding: 0;
@@ -10,9 +38,9 @@ body {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(218,212,236);
-  background: linear-gradient(45deg, rgba(218,212,236,1) 0%, rgba(243,231,233,1) 100%);
-  /* color: white; */
+  background-color: var(--clr-bcg);
+  color: var(--clr-font);
+  transition: all .1s linear;
 }
 
 code {

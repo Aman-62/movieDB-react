@@ -14,7 +14,7 @@ const MovieList = () => {
   }
   return (
     <main className='container main'>
-      <h1 className='page-title'>One place for all Movies...</h1>
+      <h1 className='page-title text-center'>One place for all Movies...</h1>
       <div className='movie-list'>
         {movies.map((item) => {
           return <Movie key={item.id} data={item} />
