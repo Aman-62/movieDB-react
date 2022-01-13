@@ -37,50 +37,42 @@ const SingleMovie = () => {
     return <h2>No Movie Found!</h2>
   }
   return (
-    <div>
-      <SearchForm />
-      <section className='container single-movie-page'>
-        <div className="heading">
-          <h3 className='single-movie-title'>{movie.title}</h3>
-          <div className="heading-info">
-            <p className='single-movie-releaseDate'>{movie.release_date}</p>
-            <span>|</span>
-            <p className='single-movie-runtime'>{movie.runtime}min</p>
-          </div>
-        </div>
+    <section className='container single-movie-page'>
+      <div className="heading">
+        <h3 className='single-movie-title'>{movie.title}</h3>
+        <p className='single-movie-date-time'>{movie.release_date}  <span>|</span>  {movie.runtime} min</p>
+      </div>
+      <div className="flex">
+
         <div className="single-movie-img">
           <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt="" />
         </div>
-        <div className="single-movie-info">
+        <div className="summary">
           <p className='single-movie-tagline'>{movie.tagline}</p>
           <p className='single-movie-summary'>{movie.overview}</p>
-          <hr />
-          <p>Genres :
-            {movie.genres.map((item) => {
-              return <span key={item.id}> {item.name}, </span>
-            })}
-          </p>
-          <br />
-          <p>Popularity : {movie.popularity}</p>
-          <p>Budget : {movie.budget}</p>
-          <p>Revenue : {movie.revenue}</p>
-          <br />
-          <p>Prduction Companies :
-            {movie.production_companies.map((item) => {
-              return <span key={item.id}> {item.name}, </span>
-            })}
-          </p>
-          <br />
-          <p>Language :
-            {movie.spoken_languages.map((item) => {
-              return <span key={item.iso_639_1}> {item.name}</span>
-            })}
-          </p>
-          <br />
-          <p>Vote : {movie.vote_average}</p>
         </div>
-      </section >
-    </div >
+      </div>
+      <div className="single-movie-more-info">
+        <p>Genres :
+          {movie.genres.map((item) => {
+            return <span key={item.id}> {item.name} | </span>
+          })}
+        </p>
+        <p>Popularity : {movie.popularity} | Vote : {movie.vote_average}</p>
+
+        <p>Budget : ${movie.budget} | Revenue : ${movie.revenue}</p>
+        <p>Prduction Companies :
+          {movie.production_companies.map((item) => {
+            return <span key={item.id}> {item.name} | </span>
+          })}
+        </p>
+        <p>Language :
+          {movie.spoken_languages.map((item) => {
+            return <span key={item.iso_639_1}> {item.name} | </span>
+          })}
+        </p>
+      </div>
+    </section >
   )
 }
 

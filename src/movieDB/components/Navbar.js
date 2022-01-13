@@ -32,18 +32,20 @@ const Navbar = () => {
           <p>TheMovieDB</p>
         </Link>
       </div>
-      <ul className='links'>
-        <button className='search-btn' onClick={toggleTheme}>{theme === 'light-theme' ? <FiMoon /> : <FiSun />}</button>
+      <div className="nav-links">
         <button className='search-btn' onClick={() => { setSearchToggle(!searchToggle) }}>
           <FiSearch />
         </button>
-        <li>
-          <Link to='/'>Home</Link>
-        </li>
-        <li>
-          <Link to='/about'>About</Link>
-        </li>
-      </ul>
+        <ul className='links'>
+          <li>
+            <Link to='/'>Home</Link>
+          </li>
+          <li>
+            <Link to='/about'>About</Link>
+          </li>
+        </ul>
+        <button className='theme-toggle-btn' onClick={toggleTheme}>{theme === 'light-theme' ? <FiMoon /> : <FiSun />}</button>
+      </div>
     </nav>
   )
 }
