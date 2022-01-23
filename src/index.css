@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700&display=swap");
 
 :root {
   --clr-bcg: #fff;
@@ -18,32 +18,33 @@
 } */
 
 .dark-theme {
-  --clr-bcg:#161622;
+  --clr-bcg: #161622;
   --clr-font: #fff;
-  --clr-primary:#FBC390;
+  --clr-primary: #fbc390;
 }
 .light-theme {
-  --clr-bcg:#EFF0F2;
+  --clr-bcg: #eff0f2;
   --clr-font: #282c35;
-  --clr-primary:#FBC390;
+  --clr-primary: #fbc390;
 }
 
-*,*::before,*::after{
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  /* font-family: 'Anton', sans-serif; */
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--clr-bcg);
   color: var(--clr-font);
-  transition: all .1s linear;
+  transition: all 0.1s linear;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

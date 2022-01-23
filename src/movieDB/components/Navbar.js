@@ -12,8 +12,6 @@ const Navbar = () => {
     }
     return theme;
   };
-
-  const { searchToggle, setSearchToggle } = useGlobalContext()
   const [theme, setTheme] = useState(getStorageTheme())
   const toggleTheme = () => {
     if (theme === 'light-theme') {
@@ -33,9 +31,6 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="nav-links">
-        <button className='search-btn' onClick={() => { setSearchToggle(!searchToggle) }}>
-          <FiSearch />
-        </button>
         <ul className='links'>
           <li>
             <Link to='/'>Home</Link>

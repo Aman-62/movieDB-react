@@ -5,12 +5,13 @@ const Movie = (props) => {
   const { id, title, release_date, poster_path } = props.data;
   return (
     <section className='movie-list-single'>
-      {/* <div>
-      <img src="" alt="" />
-    </div> */}
-      <Link to={`/movie/${id}`} className='poster'>
-        <img src={`https://image.tmdb.org/t/p/w780${poster_path}`} alt="" />
-      </Link>
+      <div className="image">
+        <div className="wrapper">
+          <Link to={`/movie/${id}`} className='poster'>
+            <img src={`https://image.tmdb.org/t/p/w220_and_h330_face${poster_path}`} alt="" />
+          </Link>
+        </div>
+      </div>
       <Link to={`/movie/${id}`}>
         <h3 className='movie-title'>{title.length > 15 ? title.slice(0, 15) + '...' : title}</h3>
       </Link>
@@ -18,5 +19,4 @@ const Movie = (props) => {
     </section>
   )
 }
-
 export default Movie

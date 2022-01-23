@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useGlobalContext } from '../Context'
 
 const SearchForm = () => {
-  const { setSearchTerm, searchToggle } = useGlobalContext()
-  const searchValue = React.useRef('')
+  const { setSearchTerm } = useGlobalContext()
+  const searchValue = useRef('')
 
-  React.useEffect(() => {
+  useEffect(() => {
     searchValue.current.focus()
   })
 
@@ -13,7 +13,7 @@ const SearchForm = () => {
     setSearchTerm(searchValue.current.value)
   }
   return (
-    <section className={searchToggle ? 'search-container container active' : 'search-container container'}>
+    <section className='search-container container'>
       <form action="" onSubmit={(e) => { e.preventDefault() }}>
         <div className='search-input'>
           <label htmlFor="name">

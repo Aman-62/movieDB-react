@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
-import SingleMovie from './pages/SingleMovie'
+import SingleMovieTwo from './pages/SingleMovieTwo'
 import Error from './pages/Error'
 import Navbar from './components/Navbar'
 import Loading from './components/Loading'
@@ -16,7 +16,7 @@ const Main = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/movie/:id" element={<SingleMovie />} />
+        <Route path="/movie/:id" element={<SingleMovieTwo />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<Error />} />
         <Route path="lol" element={<Loading />} />
