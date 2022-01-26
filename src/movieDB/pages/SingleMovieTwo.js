@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Loading from '../components/Loading'
+import Loading from '../Components/Loading'
 import { useParams } from 'react-router-dom'
 var tags = require('language-tags')
 
@@ -77,7 +77,7 @@ const SingleMovie = () => {
           <div className="title-div">
 
             <h2 className='single-movie-title'>{movie.title}</h2>
-            <p>{movie.release_date} | {movie.genres.map((item) => {
+            <p className='date'>{movie.release_date} | {movie.genres.map((item) => {
               return <span key={item.id}> {item.name} | </span>
             })} {timeConverter(movie.runtime)}</p>
           </div>

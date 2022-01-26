@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import Loading from '../components/Loading'
+import Loading from '../Components/Loading'
 import { useParams, Link } from 'react-router-dom'
-import SearchForm from '../components/SearchForm'
+import SearchForm from '../Components/SearchForm'
 
 // const url = 'https://api.themoviedb.org/3/movie/557?api_key=a44a598404f1aa8b8440fc402ccab41e'
 

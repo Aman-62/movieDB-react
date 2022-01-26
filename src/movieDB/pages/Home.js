@@ -1,6 +1,7 @@
 import React from 'react';
-import MovieList from '../components/MovieList';
-import SearchForm from '../components/SearchForm';
+import MovieList from '../Components/MovieList';
+import SearchForm from '../Components/SearchForm';
+import { Footer } from '../Components/Footer';
 // import { useGlobalContext } from '../Context';
 // import PopularMovie from '../components/PopularMovie';
 // import TopRatedMovie from '../components/TopRatedMovie';
@@ -13,6 +14,7 @@ const Home = () => {
       {/* <PopularMovie />
       <TopRatedMovie />
       <UpcomingMovie /> */}
+      <Footer />
     </main>
   )
 }

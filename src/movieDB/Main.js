@@ -3,12 +3,12 @@ import {
   Routes,
   Route
 } from 'react-router-dom'
-import Home from './pages/Home'
-import About from './pages/About'
-import SingleMovieTwo from './pages/SingleMovieTwo'
-import Error from './pages/Error'
-import Navbar from './components/Navbar'
-import Loading from './components/Loading'
+import Home from './Pages/Home'
+import About from './Pages/About'
+import SingleMovieTwo from './Pages/SingleMovieTwo'
+import Error from './Pages/Error'
+import Navbar from './Components/Navbar'
+import Loading from './Components/Loading'
 
 const Main = () => {
   return (

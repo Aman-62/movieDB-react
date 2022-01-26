@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
-import { FiSearch, FiSun, FiMoon } from "react-icons/fi";
-import { useGlobalContext } from '../Context';
+import { FiSun, FiMoon } from "react-icons/fi";
 import '../../index.css'
 
 const Navbar = () => {
@@ -32,14 +31,16 @@ const Navbar = () => {
       </div>
       <div className="nav-links">
         <ul className='links'>
-          <li>
+          <li className='flex-center'>
+            <button className='theme-toggle-btn flex-center' onClick={toggleTheme}>{theme === 'light-theme' ? <FiMoon /> : <FiSun />}</button>
+          </li>
+          <li className='flex-center'>
             <Link to='/'>Home</Link>
           </li>
-          <li>
+          <li className='flex-center'>
             <Link to='/about'>About</Link>
           </li>
         </ul>
-        <button className='theme-toggle-btn' onClick={toggleTheme}>{theme === 'light-theme' ? <FiMoon /> : <FiSun />}</button>
       </div>
     </nav>
   )

@@ -1,5 +1,4 @@
-// import logo from './logo.svg';
-import './App.css';
+import './movieDB/Styles/App.css';
 import Main from './movieDB/Main';
 function App() {
   return (

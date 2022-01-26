@@ -1,33 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700&display=swap");
 
-:root {
-  --clr-bcg: #fff;
-  --clr-font: #282c35;
-  --clr-primary: #d23669;
-}
-
-/* .dark-theme {
-  --clr-bcg: #282c35;
-  --clr-font: #fff;
-  --clr-primary: #ffa7c4;
-}
-.light-theme {
-  --clr-bcg: #fff;
-  --clr-font: #282c35;
-  --clr-primary: #d23669;
-} */
-
-.dark-theme {
-  --clr-bcg: #161622;
-  --clr-font: #fff;
-  --clr-primary: #fbc390;
-}
-.light-theme {
-  --clr-bcg: #eff0f2;
-  --clr-font: #282c35;
-  --clr-primary: #fbc390;
-}
-
 *,
 *::before,
 *::after {
@@ -39,12 +11,4 @@ body {
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--clr-bcg);
-  color: var(--clr-font);
-  transition: all 0.1s linear;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
